@@ -1,16 +1,22 @@
-path = require('path')
-webpack = require('webpack')
+# See webpack.config.js for more examples:
+# https://github.com/webpack/webpack-with-common-libs/blob/master/webpack.config.js
+
+path = require 'path'
+webpack = require 'webpack'
+
+# webpack-dev-server options used in gulpfile
+# https://github.com/webpack/webpack-dev-server
 
 module.exports =
+
+  contentBase: "#{__dirname}/src"
+
   cache: true
 
   entry:
-    jquery: './app/jquery'
-    bootstrap: [
-      'bootstrap-webpack!./app/bootstrap/bootstrap.config.js'
-      './app/bootstrap'
-    ]
+    jquery: './bower_components/jquery/dist/jquery'
 
+  # bootstrap: ['bootstrap-webpack!./app/bootstrap/bootstrap.config.js', './app/bootstrap']
   output:
     path: path.join(__dirname, 'dist')
     publicPath: 'dist/'
@@ -19,10 +25,6 @@ module.exports =
 
   module:
     loaders: [
-      {
-        test: /\.coffee$/
-        loader: 'coffee'
-      }
       {
         # required to write 'require('./style.css')'
         test: /\.css$/
@@ -50,15 +52,13 @@ module.exports =
   resolve:
     alias:
       # Bind version of jquery
-      jquery: 'jquery-2.0.3'
+      jquery: 'jquery-2.1.0'
 
-      extensions:
-        ['', '.web.coffee', '.web.js', '.coffee', '.js']
-
-  plugins: [new webpack.ProvidePlugin(
-    # Automtically detect jQuery and $ as free var in modules
-    # and inject the jquery library
-    # This is required by many jquery plugins
-    jQuery: 'jquery'
-    $: 'jquery'
-  )]
+  plugins: [
+    new webpack.ProvidePlugin
+      # Automtically detect jQuery and $ as free var in modules
+      # and inject the jquery library
+      # This is required by many jquery plugins
+      jQuery: 'jquery'
+      $: 'jquery'
+  ]
