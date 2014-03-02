@@ -1,6 +1,8 @@
 {
   "name": "airship-tracker",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "backbone": null,
+    "pouchdb": null
   }
 }
