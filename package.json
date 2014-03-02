@@ -39,6 +39,8 @@
     "coffee-script": "~1.7",
     "webpack": "~1.0",
     "webpack-dev-server": "~1.2",
+    "coffee-loader": "~0.7",
+    "script-loader": "~0.5",
     "node-sass": "~0.7.0"
   }
 }
