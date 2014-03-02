@@ -9,12 +9,13 @@ webpack = require 'webpack'
 
 module.exports =
 
-  contentBase: "#{__dirname}/src"
+  contentBase: "#{__dirname}/src/"
 
   cache: true
 
   entry:
-    jquery: './bower_components/jquery/dist/jquery'
+    app: './src/js/app'
+    head: './src/js/head'
 
   # bootstrap: ['bootstrap-webpack!./app/bootstrap/bootstrap.config.js', './app/bootstrap']
   output:
@@ -25,6 +26,10 @@ module.exports =
 
   module:
     loaders: [
+      {
+        test: /\.coffee$/
+        loader: 'coffee-loader'
+      }
       {
         # required to write 'require('./style.css')'
         test: /\.css$/
@@ -50,15 +55,7 @@ module.exports =
     ]
 
   resolve:
+    extensions: ['', '.webpack.js', '.web.js', '.coffee', '.js']
+    modulesDirectories: ['web_modules', 'bower_components', 'node_modules']
     alias:
-      # Bind version of jquery
-      jquery: 'jquery-2.1.0'
-
-  plugins: [
-    new webpack.ProvidePlugin
-      # Automtically detect jQuery and $ as free var in modules
-      # and inject the jquery library
-      # This is required by many jquery plugins
-      jQuery: 'jquery'
-      $: 'jquery'
-  ]
+      foundation: 'foundation/js/foundation'
