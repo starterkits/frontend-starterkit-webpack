@@ -23,7 +23,7 @@ gulp.task 'webpack-dev-server', (callback) ->
 
   # Start a webpack-dev-server
   new WebpackDevServer webpack(conf),
-    publicPath: '/' + conf.output.publicPath
+    contentBase: conf.contentBase
     stats:
       colors: true
   .listen 8080, 'localhost', (err) ->
