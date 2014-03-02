@@ -1,0 +1,40 @@
+{
+  "name": "airship-tracker",
+  "version": "0.0.0",
+  "description": "Personal data tracker app.",
+  "author": "Joe Johnston",
+  "homepage": "http://airship.co",
+  "keywords": [
+    "tracker",
+    "quantified self",
+    "pouchdb",
+    "phonegap"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/airships/tracker.git"
+  },
+  "bugs": "https://github.com/airships/tracker/issues",
+  "contributors": "https://github.com/airships/tracker/graphs/contributors",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/airships/tracker/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "engineStrict": true,
+  "dependencies": {},
+  "optionalDependencies": {},
+  "devDependencies": {
+    "gulp": "~3.5.5",
+    "coffee-script": "~1.7",
+    "webpack": "~1.0",
+    "webpack-dev-server": "~1.2"
+  }
+}
