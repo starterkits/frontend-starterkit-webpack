@@ -33,8 +33,11 @@
   "optionalDependencies": {},
   "devDependencies": {
     "gulp": "~3.5.5",
+    "gulp-sass": "~0.7",
+    "gulp-util": "~2.2",
     "coffee-script": "~1.7",
     "webpack": "~1.0",
-    "webpack-dev-server": "~1.2"
+    "webpack-dev-server": "~1.2",
+    "node-sass": "~0.7.0"
   }
 }
