@@ -18,7 +18,7 @@ gulp.task 'default', ['webpack-dev-server'], ->
 gulp.task 'webpack-dev-server', (callback) ->
   # modify some webpack config options
   conf = Object.create webpackConfig
-  conf.devtool = 'eval'
+  conf.devtool = 'source-map'
   conf.debug = true
 
   # Start a webpack-dev-server
