@@ -4,13 +4,14 @@ Webpack runs webpack-dev-server in development for on-the-fly compilation of sou
 
 CoffeeScript, SCSS, Zurb Foundation, and Bower are installed and configured.
 
-By default, CSS files are included by requiring them in JavaScript files via webpack magic. This reduces network latency and allows webpack to intelligently manage which files are actually required. See [src/js/head.coffee](https://github.com/starterkits/frontend-starterkit/blob/master/src/js/head.coffee).
+By default, CSS files are included by requiring them in JavaScript files via webpack magic. This reduces network latency and allows webpack to intelligently manage which files are actually required. See [src/js/head.coffee](https://github.com/starterkits/frontend-starterkit-minimal/blob/master/src/js/head.coffee).
 
 
 # Install
 
 ```bash
-git clone https://github.com/airships/tracker.git && cd tracker
+git clone https://github.com/starterkits/frontend-starterkit-minimal.git
+cd frontend-starterkit-minimal
 npm install -g webpack-dev-server bower
 npm install
 ```
