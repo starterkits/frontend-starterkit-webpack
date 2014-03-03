@@ -1,31 +1,33 @@
-Airship Tracker is a personal data mobile app.
+Frontend StarterKit is a barebones framework with [gulp](http://gulpjs.com/) and [webpack](http://webpack.github.io/) fully configured for rapid development.
 
-Tracker makes it easy to manually enter and analyze quantified self logs: food, habits, mood, exercise, etc.
-The project was started to meet a personal need. Other quantified self apps focus too much on diet, exercise,
-or automatic integration with tracking devices. None of the apps offered a simple interface for quickly
-capturing any event for later analysis.
+Webpack runs webpack-dev-server in development for on-the-fly compilation of source file changes. It can also compile assets for production. 
 
-Build with HTML5, PhoneGap, and PouchDB.
+CoffeeScript, SCSS, Zurb Foundation, and Bower are installed and configured.
+
+By default, CSS files are included by requiring them in JavaScript files via webpack magic. This reduces network latency and allows webpack to intelligently manage which files are actually required. See [src/js/head.coffee](https://github.com/starterkits/frontend-starterkit/blob/master/src/js/head.coffee).
+
 
 # Install
 
 ```bash
 git clone https://github.com/airships/tracker.git && cd tracker
-npm install
 npm install -g webpack-dev-server bower
-bower install
+npm install
 ```
 
 # Development
 
 ```bash
-# Run the development server
-webpack-dev-server -d --colors
+# Run webpack-dev-server
+gulp
+
+# Or manually run webpack if needed
+webpack -d --colors
 ```
 
-# TODO
+# Production
 
-* Setup Phonegap
-* Use [web workers](https://github.com/webpack/webpack/tree/master/examples/web-worker)
-* Use [i18n](https://github.com/webpack/webpack/tree/master/examples/i18n)
-
+```bash
+# Compile assets for production
+gulp build
+```
