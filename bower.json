@@ -1,10 +1,7 @@
 {
-  "name": "airship-tracker",
+  "name": "frontend-starterkit",
   "dependencies": {
     "jquery": "~2.1.0",
-    "foundation": "zurb/bower-foundation",
-    "pouchdb": null,
-    "backbone": null,
-    "backbone-pouchdb": null
+    "foundation": "zurb/bower-foundation"
   }
 }
