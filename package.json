@@ -1,25 +1,25 @@
 {
-  "name": "airship-tracker",
-  "version": "0.0.0",
-  "description": "Personal data tracker app.",
+  "name": "frontend-starterkit",
+  "version": "0.0.1",
+  "description": "Frontend deveopment framework for node.",
   "author": "Joe Johnston",
-  "homepage": "http://airship.co",
+  "homepage": "https://github.com/starterkits/frontend-starterkit",
   "keywords": [
-    "tracker",
-    "quantified self",
-    "pouchdb",
-    "phonegap"
+    "node",
+    "coffeescript",
+    "starter kit",
+    "bootstrap"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/airships/tracker.git"
+    "url": "git://github.com/starterkits/frontend-starterkit.git"
   },
-  "bugs": "https://github.com/airships/tracker/issues",
-  "contributors": "https://github.com/airships/tracker/graphs/contributors",
+  "bugs": "https://github.com/starterkits/frontend-starterkit/issues",
+  "contributors": "https://github.com/starterkits/frontend-starterkit/graphs/contributors",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/airships/tracker/master/LICENSE"
+      "url": "https://raw.github.com/starterkits/frontend-starterkit/master/LICENSE"
     }
   ],
   "scripts": {
