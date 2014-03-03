@@ -59,3 +59,5 @@ module.exports =
   resolve:
     extensions: ['', '.webpack.js', '.web.js', '.coffee', '.js', '.scss']
     modulesDirectories: ['src', 'src/js', 'web_modules', 'bower_components', 'node_modules']
+
+  plugins: []
