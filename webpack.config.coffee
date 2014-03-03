@@ -17,7 +17,6 @@ module.exports =
     app: './src/js/app'
     head: './src/js/head'
 
-  # bootstrap: ['bootstrap-webpack!./app/bootstrap/bootstrap.config.js', './app/bootstrap']
   output:
     path: path.join(__dirname, 'dist')
     publicPath: 'dist/'
@@ -31,31 +30,32 @@ module.exports =
         loader: 'coffee-loader'
       }
       {
+        test: /\.scss$/,
+        loader: "style-loader!sass-loader?outputStyle=expanded&includePaths[]=./bower_components/foundation/scss/"
+      }
+      {
         # required to write 'require('./style.css')'
         test: /\.css$/
         loader: 'style-loader!css-loader'
       }
-      {
-        # required for bootstrap icons
-        test: /\.woff$/
-        loader: 'url-loader?prefix=font/&limit=5000&minetype=application/font-woff'
-      }
-      {
-        test: /\.ttf$/
-        loader: 'file-loader?prefix=font/'
-      }
-      {
-        test: /\.eot$/
-        loader: 'file-loader?prefix=font/'
-      }
-      {
-        test: /\.svg$/
-        loader: 'file-loader?prefix=font/'
-      }
+      # {
+      #   test: /\.woff$/
+      #   loader: 'url-loader?prefix=font/&limit=5000&minetype=application/font-woff'
+      # }
+      # {
+      #   test: /\.ttf$/
+      #   loader: 'file-loader?prefix=font/'
+      # }
+      # {
+      #   test: /\.eot$/
+      #   loader: 'file-loader?prefix=font/'
+      # }
+      # {
+      #   test: /\.svg$/
+      #   loader: 'file-loader?prefix=font/'
+      # }
     ]
 
   resolve:
-    extensions: ['', '.webpack.js', '.web.js', '.coffee', '.js']
-    modulesDirectories: ['web_modules', 'bower_components', 'node_modules']
-    alias:
-      foundation: 'foundation/js/foundation'
+    extensions: ['', '.webpack.js', '.web.js', '.coffee', '.js', '.scss']
+    modulesDirectories: ['src', 'src/js', 'web_modules', 'bower_components', 'node_modules']

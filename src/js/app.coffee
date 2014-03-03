@@ -1,4 +1,4 @@
 $ = require 'jquery'
-require './foundation'
+require 'foundation'
 
 alert("Touch: #{Modernizr.touch}")
