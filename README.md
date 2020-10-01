@@ -1,3 +1,5 @@
+# Frontend Starterkit
+
 Frontend StarterKit is a barebones framework with [gulp](http://gulpjs.com/) and [webpack](http://webpack.github.io/) fully configured for rapid development.
 
 Webpack runs webpack-dev-server in development for on-the-fly compilation of source file changes. It can also compile assets for production. 
